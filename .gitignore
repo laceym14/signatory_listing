@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.httr-oauth
+googlesheets_token.rds
+original_signatories_2019-07-24_clean.rds
+signatories_2019-07-24.xlsx
+current_signatories.rds
