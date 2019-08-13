@@ -55,8 +55,8 @@ dat$city <- lapply(dat$city, function(x){
 dat$zipcode <- as.character(dat$zipcode)
 
 # 4. Bind old and new data then clean
-old <- readRDS("original_signatories_2019-07-24_clean.rds")
-upd <- bind_rows(old, dat)
+#old <- readRDS("original_signatories_2019-07-24_clean.rds")
+#upd <- bind_rows(old, dat)
 upd <- distinct(upd, first_name, last_name, email, zipcode, .keep_all = TRUE)
 
 # 5. Create the HTML for the cards
@@ -109,6 +109,7 @@ sum_card_set <- paste0(
   "</div></div>"
 )
 
+#ADD ABSOLUTE PATHS TO PREFIX SUFFIX
 html_pre <- readLines("prefix.html") %>% paste(collapse = "\n")
 html_post <- readLines("suffix.html") %>% paste(collapse = "\n")
 
